@@ -1,0 +1,316 @@
+.b-content {
+    padding: 0;
+    margin-left: 10%;
+    padding-bottom: 100px;
+
+    h1, 
+    h2,
+    h3,
+    h4,
+    .e-content > p,
+    blockquote,
+    li,
+    img,
+    caption,
+    .e-meta {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    ul, ol {
+        padding: 0 0 0 20px;
+    }
+
+    h1 {
+        font-family: 'andes_extralight', sans-serif;
+        font-size: 24px;
+        line-height: 1.4;
+        color: $accent-color;
+        margin-bottom: 15px;
+
+        *:first-child { margin-top: 80px; }
+    }
+
+    h2 {
+        font-family: 'andes_bold', sans-serif;
+        font-size: 20px;
+        line-height: 1.4;
+        color: $accent-color;
+        margin-bottom: 15px;        
+        margin-top: 35px;        
+    }
+
+    .e-meta { margin-bottom: 40px; }
+    .e-author {
+        font-weight: 100;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+
+    .e-cover-image {  
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        height: 30%;
+    }
+
+    p,
+    li {
+        font-size: 16px;
+        line-height: 1.75;
+        font-weight: 200;
+        margin-bottom: 20px;
+    }
+    
+    img { width: calc(100% - 40px); }
+
+    img:first-child {  
+        width: 100%;
+        margin: 0 !important;
+        max-height: 400px;
+    }
+    
+    a {
+        color: $main-color;
+        font-style: italic;
+        text-decoration: none;
+    }
+
+    .e-image-caption {
+        font-style: italic;
+        color: $gray-40;
+    }
+
+    .e-button {
+        display: block;
+        padding: 6px 9px;
+        background-color: $main-color;
+        margin: 30px 0 10px;
+        color: White;
+        text-align: center;
+        font-style: normal;
+        font-weight: bold;
+        letter-spacing: .4px;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+    }
+
+    blockquote {
+        font-style: italic;
+
+        p {
+            color: $gray-60;
+
+            &:before,
+            &:after {
+                content: '"';
+                color: $gray-40;
+            }
+        }
+
+        cite {
+            strong {
+                display: block;
+                color: $main-color;
+            }
+
+            em {
+                color: $gray-40;
+                font-size: .8rem;
+            }
+        }
+    }
+}
+
+.b-menu {
+    background-color: $main-color;
+    text-align: right;
+    transition: all .3s ease;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+
+    
+    .e-brand {
+        background-color: $main-color;
+        box-shadow: 2px 0 5px rgba(0,0,0,0.2);
+        font-weight: 100;
+        font-size: 30px;
+        color: white;
+        padding: 35px 40px 25px;
+
+        .e-logo {
+            background-color: transparent;
+        }
+
+        .e-site-name {
+            font-size: 20px;
+            font-weight: 200;
+            margin: 0;
+            font-family: 'andes_extralight', sans-serif;
+            letter-spacing: .5px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+        }
+
+        img {
+            max-height: 12vh;
+            max-width: 220px;
+        }
+    }
+
+    nav {
+        height: 85vh;
+        overflow: scroll;
+        background-color: rgba(0,0,0,0.1);
+        width: 100%;
+
+        > *:first-child a { padding-top: 20px; }
+
+        h2 {
+            color: $accent-color;
+            font-family: 'andes_bold', sans-serif;
+            font-size: 16px;
+            font-weight: 100;
+            text-transform: uppercase;
+            padding: 20px 40px 10px;
+            margin: 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h3 {
+            font-weight: 300;
+            font-size: 15px;
+            line-height: 1.5;
+            margin: 0;
+
+            &:first-child a { padding-bottom: 20px; }
+
+            a { padding: 10px 40px; }
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            transition: all .3s ease;
+        }
+
+        a:hover { 
+            background-color: rgba(0,0,0,0.2);
+            transition: all .3s ease;
+            color: #fff;
+        }
+    }
+
+    
+}
+
+@media only screen and (min-width: 768px) {
+
+.b-content { 
+    padding: 0;
+    margin-left: 30%;
+    background-color: #FFF;
+    padding-bottom: 100px;
+
+    h1, 
+    h2,
+    h3,
+    h4,
+    .e-content > p,
+    blockquote,
+    li,
+    img,
+    caption,
+    .e-meta {
+        margin-left: 80px;
+        margin-right: 80px;
+    }
+
+    h1 {
+        font-family: 'andes_extralight', sans-serif;
+        font-size: 42px;
+        line-height: 1.4;
+        color: $accent-color;
+        margin-bottom: 15px;
+
+        *:first-child { margin-top: 80px; }
+    }
+
+    .e-meta {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: baseline;
+
+        .e-author {
+            flex: 1;
+            margin: 0;
+            font-style: italic;
+        }
+
+        .e-button {
+            padding: 7px 9px;
+            margin: 0;
+            font-size: 14px;
+            color: #bbb;
+            border: 1px solid #ddd;
+            background-color: transparent;
+            transition: all .2s ease;
+            float: right;
+
+            &:hover {
+                background-color: $main-color;
+                color: #fff;
+                border-color: $main-color;
+                transition: all .2s ease;
+            }
+        }
+    }
+
+    .e-content {
+
+        > * { position: relative; }
+        
+        > p,
+        li {
+            font-size: 16px;
+            line-height: 1.75;
+            font-weight: 200;
+        }
+
+        .e-image-caption {
+            font-size: .8rem;
+            font-style: italic;
+            color: $gray-40;
+
+            &:hover { color: $gray-60; }
+        }
+    }
+    
+    img { max-width: calc(100% - 160px); }
+    .e-cover-image { height: 50%; }
+    blockquote { padding: 10px 0; }
+}
+
+.b-menu {
+    nav {
+       h2 { font-size: 15px; }
+       h3 { font-size: 14px; }
+
+       a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            display: block;
+            transition: all .3s ease;
+        }
+
+        a:hover { 
+            background-color: rgba(0,0,0,0.2);
+            color: rgba(255,255,255,1);
+            transition: all .3s ease;
+        }
+    }
+}
+
+}
+

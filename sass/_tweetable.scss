@@ -1,0 +1,105 @@
+@media only screen and (min-width: 768px) {
+.tweetable {
+    background-color: $gray-05;
+    cursor: pointer;
+    display: inline;
+    padding: 2px 4px;
+    margin: -2px 0;
+
+    &:hover {
+        background-color: $main-color-10;
+    }
+
+    &:before {
+        content: '\f099';
+        color: $gray-10;
+        position: absolute;
+        padding: 5px 0 0;
+        left: -30px;
+        overflow: hidden;
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transform: translate(0, 0);
+        transition: all .2s ease;
+        border-radius: 0;
+    }
+
+    &:hover:before {
+        transition: all .2s ease;
+        border-radius: 50% 0 0 50%;
+        color: $main-color;
+
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .tweetable {
+//     background-color: $gray_05;
+//     cursor: pointer;
+//     display: inline;
+//     padding: 2px 4px;
+//     margin: -2px 0;
+//     position: relative;
+
+//     &:hover {
+//         background-color: $main-color-10;
+//     }
+
+//     &:before {
+//         content: '\f099';
+//         background-color: $main-color;
+//         color: white;
+//         position: absolute;
+//         padding: 3px 0 0;
+//         top: 0;
+//         left: 0;
+//         height: calc(1.5rem - 3px);
+//         width: 0;
+//         overflow: hidden;
+//         text-indent: 6px;
+//         display: inline-block;
+//         font: normal normal normal 14px/1 FontAwesome;
+//         font-size: inherit;
+//         text-rendering: auto;
+//         -webkit-font-smoothing: antialiased;
+//         -moz-osx-font-smoothing: grayscale;
+//         transform: translate(0, 0);
+//         transition: all .2s ease;
+//         border-radius: 0;
+//     }
+
+//     &:hover:before {
+//         left: -24px;
+//         width: 24px;
+//         transition: all .2s ease;
+//         border-radius: 50% 0 0 50%;
+
+//     }
+// }

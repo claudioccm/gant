@@ -1,0 +1,29 @@
+$main-color: rgba(82,48,128,1);
+$main-color-10: rgba(82,48,128,0.1);
+$main-color-20: rgba(82,48,128,0.2);
+$main-color-50: rgba(82,48,128,0.5);
+$accent-color: #008793;
+$gray-05: rgba(0,0,0,0.05);
+$gray-10: rgba(0,0,0,0.1);
+$gray-40: rgba(0,0,0,0.4);
+$gray-60: rgba(0,0,0,0.6);
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    color: #333;
+}
+
+
+@import 'structure';
+@import 'skin';
+@import 'intro';
+@import 'tweetable';
+
+

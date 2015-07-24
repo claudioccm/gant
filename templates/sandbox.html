@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="b-content e-column b-introduction m-external">
+    
+{% for d in data %}
+    <h2>{{d.section}}</h2>
+    {% for a in data %}
+        {% if a.section is equalto d.section %}
+        <h3>{{a.title}}</h3>
+        {% endif %}
+    {% endfor %}
+{% endfor %}
+
+</article>
+{% endblock %}
+
+
+
+
+
+
+
+
