@@ -1,59 +1,72 @@
+# -*- coding: utf-8 -*-
+
 from os import path, getcwd, makedirs, listdir, remove
 from yaml import load
 from shutil import rmtree
-from slugify import slugify
 from staticjinja import make_site
 
-
 # We define constants for the deployment.
-searchpath = path.join(getcwd(), 'templates')
-outputpath = path.join(getcwd(), 'site')
+_SEARCHPATH = path.join(getcwd(), 'templates')
+_OUTPUTPATH = path.join(getcwd(), 'site')
 
 # We load the data we want to use in the templates.
-DATA = load(open('data/data.yaml'))
-
-# Clean the output folder.
-if path.exists(outputpath):
-    rmtree(outputpath)
+_DATA = load(open('data/data.yaml'))
 
 
-def loadData():
-    return {'data': DATA}
+def load_data():
+    ctx = {'data': _DATA, 'menu_sections': []}
+    dic = {}
 
-template = open('%s/article.html' % searchpath).read()
+    for index, item in enumerate(_DATA):
+        aux = {'title': item['title'], 'url': 'article-%s.html' % index}
 
-# We create a slugyfied version of the title to be used in the article_url.
+        if item['section'] not in dic:
+            dic[item['section']] = [aux]
 
-for item in DATA:
-    item['article_url'] = 'article-' + slugify(item['title'].lower()) + '.html'
+        else:
+            dic[item['section']].append(aux)
 
-# Remove publication templates that are no longer needed.
-for filename in listdir(searchpath):
-    filepath = '%s/%s' % (searchpath, filename)
+    for section_name in sorted(dic.keys()):
+        items = sorted(dic[section_name], key=lambda x: x['title'])
 
-    if filename.startswith('article-') and path.isfile(filepath):
-        remove(filepath)
+        ctx['menu_sections'].append({'name': section_name, 'items': items})
 
-# Clean the output folder.
-if path.exists(outputpath):
-    rmtree(outputpath)
+    return ctx
 
-makedirs(outputpath)
 
-for index, data in enumerate(DATA):
-    filename = slugify(data['title'].lower())
-    new_file = open('%s/article-%s.html' % (searchpath, filename), 'w+')
-    new_page = template.replace('data[0]', 'data[%d]' % index)
+def cleanup():
+    template = open('%s/article.html' % _SEARCHPATH).read()
 
-    new_file.write(new_page)
-    new_file.close()
+    # Remove publication templates that are no longer needed.
+    for filename in listdir(_SEARCHPATH):
+        filepath = '%s/%s' % (_SEARCHPATH, filename)
 
-site = make_site(
-    filters={},
-    outpath=outputpath,
-    contexts=[(r'.*.html', loadData)],
-    searchpath=searchpath,
-    staticpaths=['static', '../data']
-)
+        if filename.startswith('article-') and path.isfile(filepath):
+            remove(filepath)
 
-site.render(use_reloader=True)
+    # Clean the output folder.
+    if path.exists(_OUTPUTPATH):
+        rmtree(_OUTPUTPATH)
+
+    makedirs(_OUTPUTPATH)
+
+    for index, data in enumerate(_DATA):
+        new_file = open('%s/article-%s.html' % (_SEARCHPATH, index), 'w+')
+        new_page = template.replace('data[0]', 'data[%d]' % index)
+
+        new_file.write(new_page)
+        new_file.close()
+
+
+if __name__ == '__main__':
+    site = make_site(
+        filters={},
+        outpath=_OUTPUTPATH,
+        contexts=[(r'.*.html', load_data)],
+        searchpath=_SEARCHPATH,
+        staticpaths=['static', '../data']
+    )
+
+    cleanup()
+
+    site.render(use_reloader=True)

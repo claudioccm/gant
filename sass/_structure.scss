@@ -16,7 +16,7 @@ body {
 
 .e-column {
     -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;    
+    -ms-overflow-style: none;
     &::-webkit-scrollbar { display: none; }
 }
 
@@ -28,17 +28,16 @@ body {
 }
 
 .b-menu {
-    position: fixed;
-    z-index: 10;
+    position: absolute;
+    z-index: 100;
     background-color: #eee;
     top: 0;
     bottom: 0;
     padding: 0;
     text-align: right;
     overflow: hidden;
-    transition: all .3s ease;
     width: 85%;
-    left: -75%;
+    transform: translateX(-87%);
 
     .e-mobile-menu-trigger {
         position: absolute;
@@ -85,8 +84,8 @@ nav {
 
 @media only screen and (min-width: 768px) {
 .b-content { margin-left: 30%; }
-.b-menu { 
+.b-menu {
     width: 30%;
-    left: 0;
+    transform: translateX(0);
 }
 }
