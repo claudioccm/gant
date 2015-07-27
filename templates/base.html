@@ -22,10 +22,10 @@
             <h3><a href="/site/sandbox.html">Sandbox</a></h3>
 
             {% for section in menu_sections %}
-                <h2>{{section.name}}</h2>
+                <h2><a href="#">{{section.name}}</a></h2>
 
                 {% for item in section['items'] %}
-                    <h3>{{item.title}}</h3>
+                    <h3><a href="{{item.url}}">{{item.title}}</a></h3>
                 {% endfor %}
             {% endfor %}
         </nav>
@@ -38,7 +38,6 @@
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="static/js/scripts.js"></script>
     <script src="static/js/hammer.min.js"></script>
-    <script src="https://raw.githubusercontent.com/jakiestfu/Snap.js/develop/snap.min.js"></script>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
