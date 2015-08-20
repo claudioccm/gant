@@ -63,6 +63,7 @@ body {
 
 nav a {
   display: block; }
+
 nav a:hover {
   background-color: rgba(0, 0, 0, 0.2); }
 
@@ -79,10 +80,10 @@ nav a:hover {
 @media only screen and (min-width: 768px) {
   .b-content {
     margin-left: 30%; }
-
   .b-menu {
     width: 30%;
     transform: translateX(0); } }
+
 .b-content {
   padding: 0;
   margin-left: 10%;
@@ -105,7 +106,7 @@ nav a:hover {
     font-family: 'andes_extralight', sans-serif;
     font-size: 24px;
     line-height: 1.4;
-    color: #008793;
+    color: red;
     margin-bottom: 15px; }
     .b-content h1 *:first-child {
       margin-top: 80px; }
@@ -113,7 +114,7 @@ nav a:hover {
     font-family: 'andes_bold', sans-serif;
     font-size: 20px;
     line-height: 1.4;
-    color: #008793;
+    color: green;
     margin-bottom: 15px;
     margin-top: 35px; }
   .b-content .e-meta {
@@ -164,7 +165,8 @@ nav a:hover {
     font-style: italic; }
     .b-content blockquote p {
       color: rgba(0, 0, 0, 0.6); }
-      .b-content blockquote p:before, .b-content blockquote p:after {
+      .b-content blockquote p:before,
+      .b-content blockquote p:after {
         content: '"';
         color: rgba(0, 0, 0, 0.4); }
     .b-content blockquote cite strong {
@@ -226,10 +228,10 @@ nav a:hover {
       color: #fff;
       text-decoration: none;
       display: block;
-      transition: all .3s ease; }
+      transition: all 0.3s ease; }
     .b-menu nav a:hover {
       background-color: rgba(0, 0, 0, 0.2);
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       color: #fff; }
 
 @media only screen and (min-width: 768px) {
@@ -273,13 +275,13 @@ nav a:hover {
         color: #bbb;
         border: 1px solid #ddd;
         background-color: transparent;
-        transition: all .2s ease;
+        transition: all 0.2s ease;
         float: right; }
         .b-content .e-meta .e-button:hover {
           background-color: #523080;
           color: #fff;
           border-color: #523080;
-          transition: all .2s ease; }
+          transition: all 0.2s ease; }
     .b-content .e-content > * {
       position: relative; }
     .b-content .e-content > p,
@@ -299,7 +301,6 @@ nav a:hover {
       height: 50%; }
     .b-content blockquote {
       padding: 10px 0; }
-
   .b-menu nav h2 {
     font-size: 15px; }
   .b-menu nav h3 {
@@ -308,15 +309,18 @@ nav a:hover {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     display: block;
-    transition: all .3s ease; }
+    transition: all 0.3s ease; }
   .b-menu nav a:hover {
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
-    transition: all .3s ease; } }
+    transition: all 0.3s ease; } }
+
 .b-introduction h1 {
   margin-bottom: 20px; }
+
 .b-introduction h2 {
   margin-bottom: 60px; }
+
 .b-introduction .e-robert {
   border-radius: 50%;
   overflow: hidden;
@@ -333,6 +337,7 @@ nav a:hover {
     float: right; }
   .b-introduction p {
     margin-right: 180px; } }
+
 @media only screen and (min-width: 768px) {
   .tweetable {
     background-color: rgba(0, 0, 0, 0.05);
@@ -356,11 +361,9 @@ nav a:hover {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       transform: translate(0, 0);
-      transition: all .2s ease;
+      transition: all 0.2s ease;
       border-radius: 0; }
     .tweetable:hover:before {
-      transition: all .2s ease;
+      transition: all 0.2s ease;
       border-radius: 50% 0 0 50%;
       color: #523080; } }
-
-/*# sourceMappingURL=styles.css.map */
