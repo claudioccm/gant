@@ -1,91 +1,125 @@
-html,
-body {
-  height: 100%;
-  width: 100%;
-  overflow: auto;
-}
-
-.b-layout {
-    height: 100vh;
-    overflow: hidden;
+.progress-table {
     position: relative;
-    width: 100%;
-    backface-visibility: hidden;
-    will-change: overflow;
-}
-
-.e-column {
-    -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: none;
-    &::-webkit-scrollbar { display: none; }
-}
-
-
-.b-content {
-    padding-left: 80px;
-    height: 100vh;
-    overflow: scroll;
-}
-
-.b-menu {
-    position: absolute;
-    z-index: 100;
-    background-color: #eee;
-    top: 0;
-    bottom: 0;
-    padding: 0;
-    text-align: right;
+    height: auto;
     overflow: hidden;
-    width: 85%;
-    transform: translateX(-87%);
-
-    .e-mobile-menu-trigger {
-        position: absolute;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        width: 12%;
-    }
-
-    nav {
-        overflow: scroll;
-        background-color: rgba(0,0,0,0.08);
-        width: 100%;
-        padding-bottom: 100px;
-
-    }
-
-    .e-logo {
-        background-color: #eee;
-        margin: 0;
-        width: 100%;
-    }
-
-    &.m-active {
-        left: 0;
-    }
 }
 
-nav {
-    a { display: block; }
-    a:hover { background-color: rgba(0,0,0,0.2); }
+.row {
+    display: block;
+    border-bottom: 1px solid $gray-10;
 }
 
-#overlay {
-    position: fixed;
+.row:nth-of-type(even) {
+    background-color: $gray-03;
+}
+
+.m-active {
+    max-height: 49px;
+    overflow: hidden;
+}
+
+.content {
+    flex: 1;
+    position: relative;
+}
+
+.col {
+    display: inline-block;
+    width: 6%;
+    padding: 15px 0;
+    vertical-align: top;
+}
+
+.zebra {
+    position: absolute;
+    width: 100%;
     top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    display: none;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
 
-    &.m-active { display: block; }
+    .month:nth-child(odd) {
+        background-color: $gray-03;
+        height: 1500vh;
+    }
 }
 
-@media only screen and (min-width: 768px) {
-.b-content { margin-left: 30%; }
-.b-menu {
-    width: 30%;
-    transform: translateX(0);
+.month,
+.section,
+.divider {
+    font-weight: bold;
 }
+
+.main-header.main-header {
+    background-color: $accent-color;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    .col:not(.name) {
+        text-align: center;
+    }
+}
+
+.phase > .header {
+    background-color: $main-color;
+    color: white;
+}
+
+.stage > .header {
+    background-color: $main-color-20;
+    color: $main-color;
+    font-weight: bold;
+}
+
+.header {
+    text-transform: uppercase;
+    background-color: $accent-color-20;
+    
+}
+
+.name {
+    width: 22%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.row {
+    display: flex;
+}
+
+.progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: $gray-10;
+    
+
+    .bar {
+        position: absolute;
+        background-color: green;
+        opacity: .3;
+    }
+}
+
+.header .progress {
+    background-color: $gray-10;
+    height: 49px;
+    width: 100%;
+
+    .bar {
+        height: 100%;
+        left: 0;
+        top: 0;
+    }
+}
+
+.task .progress {
+    height: 10px;
+
+    .bar {
+        background-color: green;
+        height: 100%;
+    }
 }

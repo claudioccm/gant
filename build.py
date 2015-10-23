@@ -17,14 +17,14 @@ def load_data():
     ctx = {'data': _DATA, 'menu_sections': []}
     dic = {}
 
-    for index, item in enumerate(_DATA):
-        aux = {'title': item['title'], 'url': 'article-%s.html' % index}
+    # for index, item in enumerate(_DATA):
+    #     aux = {'title': item['title'], 'url': 'article-%s.html' % index}
 
-        if item['section'] not in dic:
-            dic[item['section']] = [aux]
+    #     if item['section'] not in dic:
+    #         dic[item['section']] = [aux]
 
-        else:
-            dic[item['section']].append(aux)
+    #     else:
+    #         dic[item['section']].append(aux)
 
     for section_name in sorted(dic.keys()):
         items = sorted(dic[section_name], key=lambda x: x['title'])
@@ -34,28 +34,28 @@ def load_data():
     return ctx
 
 
-def cleanup():
-    template = open('%s/article.html' % _SEARCHPATH).read()
+# def cleanup():
+#     template = open('%s/article.html' % _SEARCHPATH).read()
 
-    # Remove publication templates that are no longer needed.
-    for filename in listdir(_SEARCHPATH):
-        filepath = '%s/%s' % (_SEARCHPATH, filename)
+#     # Remove publication templates that are no longer needed.
+#     for filename in listdir(_SEARCHPATH):
+#         filepath = '%s/%s' % (_SEARCHPATH, filename)
 
-        if filename.startswith('article-') and path.isfile(filepath):
-            remove(filepath)
+#         if filename.startswith('article-') and path.isfile(filepath):
+#             remove(filepath)
 
-    # Clean the output folder.
-    if path.exists(_OUTPUTPATH):
-        rmtree(_OUTPUTPATH)
+#     # Clean the output folder.
+#     if path.exists(_OUTPUTPATH):
+#         rmtree(_OUTPUTPATH)
 
-    makedirs(_OUTPUTPATH)
+#     makedirs(_OUTPUTPATH)
 
-    for index, data in enumerate(_DATA):
-        new_file = open('%s/article-%s.html' % (_SEARCHPATH, index), 'w+')
-        new_page = template.replace('data[0]', 'data[%d]' % index)
+#     for index, data in enumerate(_DATA):
+#         new_file = open('%s/article-%s.html' % (_SEARCHPATH, index), 'w+')
+#         new_page = template.replace('data[0]', 'data[%d]' % index)
 
-        new_file.write(new_page)
-        new_file.close()
+#         new_file.write(new_page)
+#         new_file.close()
 
 
 if __name__ == '__main__':
@@ -67,6 +67,6 @@ if __name__ == '__main__':
         staticpaths=['static', '../data']
     )
 
-    cleanup()
+    # cleanup()
 
     site.render(use_reloader=True)

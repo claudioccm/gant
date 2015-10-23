@@ -1,0 +1,99 @@
+// .stage:not(.m-active) .task .progress {
+//     top: 20px;
+// }
+
+// .stage.m-active {
+//     position: relative;
+
+//     .category:first-of-type .task .progress { top: 10px; }
+//     .category:nth-of-type(2) .task .progress  { top: 20px; }
+
+//     .task {
+//         position: absolute;
+//         top: 0;
+//         width: 100%;
+//         pointer-events: none;
+//         border-color: transparent;
+
+//         .name { opacity: 0; }
+
+//         .progress {
+//             .bar { display: none; }
+//         }
+//     }
+
+//     .task:only-of-type .progress { top: 20px; }
+
+//     &.items-2 {
+//         .task:nth-of-type(2) .progress { top: 10px; }
+//         .task:nth-of-type(3) .progress { top: 20px; }
+//     }
+
+//     &.items-3 {
+//         .task:nth-of-type(2) .progress { top: 10px; }
+//         .task:nth-of-type(3) .progress { top: 20px; }
+//         .task:nth-of-type(4) .progress { top: 30px; }
+//     }
+
+//     &.items-4 {
+//         .task:nth-of-type(2) .progress { top: 5px; }
+//         .task:nth-of-type(3) .progress { top: 15px; }
+//         .task:nth-of-type(4) .progress { top: 25px; }
+//         .task:nth-of-type(5) .progress { top: 35px; }
+//     }
+
+//     &.items-5 {
+//         .task .progress { height: 5px; }
+//         .task:nth-of-type(2) .progress { top: 10px; }
+//         .task:nth-of-type(3) .progress { top: 15px; }
+//         .task:nth-of-type(4) .progress { top: 20px; }
+//         .task:nth-of-type(5) .progress { top: 25px; }
+//         .task:nth-of-type(6) .progress { top: 30px; }
+//     }
+
+//     &.items-6 {
+//         .task .progress { height: 5px; }
+//         .task:nth-of-type(2) .progress { top: 10px; }
+//         .task:nth-of-type(3) .progress { top: 15px; }
+//         .task:nth-of-type(4) .progress { top: 20px; }
+//         .task:nth-of-type(5) .progress { top: 25px; }
+//         .task:nth-of-type(6) .progress { top: 30px; }
+//         .task:nth-of-type(7) .progress { top: 35px; }
+//     }
+
+//     &.items-7 {
+//         .task .progress { height: 5px; }
+//         .task:nth-of-type(2) .progress { top: 5px; }
+//         .task:nth-of-type(3) .progress { top: 10px; }
+//         .task:nth-of-type(4) .progress { top: 15px; }
+//         .task:nth-of-type(5) .progress { top: 20px; }
+//         .task:nth-of-type(6) .progress { top: 25px; }
+//         .task:nth-of-type(7) .progress { top: 30px; }
+//         .task:nth-of-type(8) .progress { top: 35px; }
+//     }
+
+//     &.items-8 {
+//         .task .progress { height: 4px; }
+//         .task:nth-of-type(2) .progress { top: 7px; }
+//         .task:nth-of-type(3) .progress { top: 11px; }
+//         .task:nth-of-type(4) .progress { top: 15px; }
+//         .task:nth-of-type(5) .progress { top: 19px; }
+//         .task:nth-of-type(6) .progress { top: 23px; }
+//         .task:nth-of-type(7) .progress { top: 27px; }
+//         .task:nth-of-type(8) .progress { top: 31px; }
+//         .task:nth-of-type(9) .progress { top: 35px; }
+//     }
+
+//     &.items-9 {
+//         .task .progress { height: 4px; }
+//         .task:nth-of-type(2) .progress { top: 7px; }
+//         .task:nth-of-type(3) .progress { top: 11px; }
+//         .task:nth-of-type(4) .progress { top: 15px; }
+//         .task:nth-of-type(5) .progress { top: 19px; }
+//         .task:nth-of-type(6) .progress { top: 23px; }
+//         .task:nth-of-type(7) .progress { top: 27px; }
+//         .task:nth-of-type(8) .progress { top: 31px; }
+//         .task:nth-of-type(9) .progress { top: 35px; }
+//         .task:nth-of-type(10) .progress { top: 35px; }
+//     }
+// }

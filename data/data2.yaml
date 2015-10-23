@@ -1,0 +1,29 @@
+- responsible:
+    id: 1
+    name: Action by PIO and follow-pu by OPCS
+    color: orange
+
+- phase:
+    id: 1
+    name: Part 1: Organizing for Delivery
+
+- stage:
+    id: 1
+    name: Staff Skills
+
+- category:
+    id: 1
+    name: Enhance and Train Staff
+
+- task:
+    id: 1
+    name: Integrated Operations Risk Management Forum
+    start_date: 7-1-2015 
+    end_date: 7-30-2015
+    progress: 46
+    relevance: 1
+    category: 1
+    stage: 1
+    phase: 1
+    responsible: 2
+

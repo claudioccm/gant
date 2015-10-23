@@ -1,10 +1,15 @@
-$main-color: rgba(82,48,128,1);
-$main-color-10: rgba(82,48,128,0.1);
-$main-color-20: rgba(82,48,128,0.2);
-$main-color-50: rgba(82,48,128,0.5);
-$accent-color: #008793;
+$main-color: rgba(0,174,240,1);
+$main-color-10: rgba(0,174,240,0.1);
+$main-color-20: rgba(0,174,240,0.2);
+$main-color-50: rgba(0,174,240,0.5);
+$accent-color: rgba(0,45,85,1);
+$accent-color-10: rgba(0,45,85,.1);
+$accent-color-20: rgba(0,45,85,.2);
+$accent-color-60: rgba(0,45,85,.6);
+$gray-03: rgba(0,0,0,0.03);
 $gray-05: rgba(0,0,0,0.05);
 $gray-10: rgba(0,0,0,0.1);
+$gray-20: rgba(0,0,0,0.2);
 $gray-40: rgba(0,0,0,0.4);
 $gray-60: rgba(0,0,0,0.6);
 
@@ -12,19 +17,25 @@ $gray-60: rgba(0,0,0,0.6);
     box-sizing: border-box;
 }
 
-
-
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Merriweather', serif;
     color: #333;
+    font-family: Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    line-height: 1.5;
 }
 
+@mixin transition {
+    transition: all 1s ease;
+}
 
 @import 'structure';
 @import 'skin';
-@import 'intro';
-@import 'tweetable';
+@import 'category-active';
+@import 'stage-active';
 
+body, html {
+    height: 100%;
+}
 

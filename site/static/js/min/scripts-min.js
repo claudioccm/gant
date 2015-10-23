@@ -1,0 +1,1 @@
+$(document).ready(function($){$(".js-collapse").click(function(){$(this).parent().toggleClass("m-active")})});
