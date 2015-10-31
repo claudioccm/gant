@@ -21,10 +21,6 @@ body {
 .row:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.03); }
 
-.m-active {
-  max-height: 49px;
-  overflow: hidden; }
-
 .content {
   flex: 1;
   position: relative; }
@@ -74,9 +70,11 @@ body {
   background-color: rgba(0, 45, 85, 0.2); }
 
 .name {
-  width: 22%;
+  width: 25%;
   text-align: right;
-  padding-right: 20px; }
+  padding-right: 20px;
+  white-space: nowrap;
+  overflow: hidden; }
 
 .row {
   display: flex; }
@@ -91,15 +89,6 @@ body {
     background-color: green;
     opacity: .3; }
 
-.header .progress {
-  background-color: rgba(0, 0, 0, 0.1);
-  height: 49px;
-  width: 100%; }
-  .header .progress .bar {
-    height: 100%;
-    left: 0;
-    top: 0; }
-
 .task .progress {
   height: 10px; }
   .task .progress .bar {
@@ -108,119 +97,6 @@ body {
 
 .category:not(.m-active) .task .progress {
   top: 20px; }
-
-.category.m-active {
-  position: relative; }
-  .category.m-active .task {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    pointer-events: none;
-    border-color: transparent; }
-    .category.m-active .task .name {
-      opacity: 0; }
-    .category.m-active .task .progress .bar {
-      display: none; }
-  .category.m-active .task:only-of-type .progress {
-    top: 20px; }
-  .category.m-active.items-2 .task:nth-of-type(2) .progress {
-    top: 10px; }
-  .category.m-active.items-2 .task:nth-of-type(3) .progress {
-    top: 20px; }
-  .category.m-active.items-3 .task:nth-of-type(2) .progress {
-    top: 10px; }
-  .category.m-active.items-3 .task:nth-of-type(3) .progress {
-    top: 20px; }
-  .category.m-active.items-3 .task:nth-of-type(4) .progress {
-    top: 30px; }
-  .category.m-active.items-4 .task:nth-of-type(2) .progress {
-    top: 5px; }
-  .category.m-active.items-4 .task:nth-of-type(3) .progress {
-    top: 15px; }
-  .category.m-active.items-4 .task:nth-of-type(4) .progress {
-    top: 25px; }
-  .category.m-active.items-4 .task:nth-of-type(5) .progress {
-    top: 35px; }
-  .category.m-active.items-5 .task .progress {
-    height: 5px; }
-  .category.m-active.items-5 .task:nth-of-type(2) .progress {
-    top: 10px; }
-  .category.m-active.items-5 .task:nth-of-type(3) .progress {
-    top: 15px; }
-  .category.m-active.items-5 .task:nth-of-type(4) .progress {
-    top: 20px; }
-  .category.m-active.items-5 .task:nth-of-type(5) .progress {
-    top: 25px; }
-  .category.m-active.items-5 .task:nth-of-type(6) .progress {
-    top: 30px; }
-  .category.m-active.items-6 .task .progress {
-    height: 5px; }
-  .category.m-active.items-6 .task:nth-of-type(2) .progress {
-    top: 10px; }
-  .category.m-active.items-6 .task:nth-of-type(3) .progress {
-    top: 15px; }
-  .category.m-active.items-6 .task:nth-of-type(4) .progress {
-    top: 20px; }
-  .category.m-active.items-6 .task:nth-of-type(5) .progress {
-    top: 25px; }
-  .category.m-active.items-6 .task:nth-of-type(6) .progress {
-    top: 30px; }
-  .category.m-active.items-6 .task:nth-of-type(7) .progress {
-    top: 35px; }
-  .category.m-active.items-7 .task .progress {
-    height: 5px; }
-  .category.m-active.items-7 .task:nth-of-type(2) .progress {
-    top: 5px; }
-  .category.m-active.items-7 .task:nth-of-type(3) .progress {
-    top: 10px; }
-  .category.m-active.items-7 .task:nth-of-type(4) .progress {
-    top: 15px; }
-  .category.m-active.items-7 .task:nth-of-type(5) .progress {
-    top: 20px; }
-  .category.m-active.items-7 .task:nth-of-type(6) .progress {
-    top: 25px; }
-  .category.m-active.items-7 .task:nth-of-type(7) .progress {
-    top: 30px; }
-  .category.m-active.items-7 .task:nth-of-type(8) .progress {
-    top: 35px; }
-  .category.m-active.items-8 .task .progress {
-    height: 4px; }
-  .category.m-active.items-8 .task:nth-of-type(2) .progress {
-    top: 7px; }
-  .category.m-active.items-8 .task:nth-of-type(3) .progress {
-    top: 11px; }
-  .category.m-active.items-8 .task:nth-of-type(4) .progress {
-    top: 15px; }
-  .category.m-active.items-8 .task:nth-of-type(5) .progress {
-    top: 19px; }
-  .category.m-active.items-8 .task:nth-of-type(6) .progress {
-    top: 23px; }
-  .category.m-active.items-8 .task:nth-of-type(7) .progress {
-    top: 27px; }
-  .category.m-active.items-8 .task:nth-of-type(8) .progress {
-    top: 31px; }
-  .category.m-active.items-8 .task:nth-of-type(9) .progress {
-    top: 35px; }
-  .category.m-active.items-9 .task .progress {
-    height: 4px; }
-  .category.m-active.items-9 .task:nth-of-type(2) .progress {
-    top: 7px; }
-  .category.m-active.items-9 .task:nth-of-type(3) .progress {
-    top: 11px; }
-  .category.m-active.items-9 .task:nth-of-type(4) .progress {
-    top: 15px; }
-  .category.m-active.items-9 .task:nth-of-type(5) .progress {
-    top: 19px; }
-  .category.m-active.items-9 .task:nth-of-type(6) .progress {
-    top: 23px; }
-  .category.m-active.items-9 .task:nth-of-type(7) .progress {
-    top: 27px; }
-  .category.m-active.items-9 .task:nth-of-type(8) .progress {
-    top: 31px; }
-  .category.m-active.items-9 .task:nth-of-type(9) .progress {
-    top: 35px; }
-  .category.m-active.items-9 .task:nth-of-type(10) .progress {
-    top: 35px; }
 
 body, html {
   height: 100%; }

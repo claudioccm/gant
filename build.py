@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 
+from calendar import monthrange
+from datetime import datetime, timedelta
 from os import path, getcwd, makedirs, listdir, remove
 from yaml import load
 from shutil import rmtree
@@ -12,57 +14,79 @@ _OUTPUTPATH = path.join(getcwd(), 'site')
 # We load the data we want to use in the templates.
 _DATA = load(open('data/data.yaml'))
 
+# Setting some Global Vars
+START_GANTT = '6-1-2015'
+END_GANTT = '8-31-2016'
+GANTT_SPAN = 427
+COL_WIDTH = 6
+
+
+# Converting strings into date objects
+def convert_to_time(date):
+    return datetime.strptime(date, '%m-%d-%Y')
+
+# Getting the timespan between 2 dates (IN DAYS)
+def get_timespan(start_date, end_date):
+    start = convert_to_time(start_date)
+    end = convert_to_time(end_date)
+
+    timespan = end - start
+
+    return timespan.days
+
+def get_month_delta(d1, d2):
+    delta = 0
+    while True:
+        mdays = monthrange(d1.year, d1.month)[1]
+        d1 += timedelta(days=mdays)
+        if d1 <= d2:
+            delta += 1
+        else:
+            break
+    return delta
+
+# GANTT_SPAN = get_timespan(START_GANTT, END_GANTT)
+# print '==================', GANTT_SPAN, '=================='
 
 def load_data():
-    ctx = {'data': _DATA, 'menu_sections': []}
-    dic = {}
-
-    # for index, item in enumerate(_DATA):
-    #     aux = {'title': item['title'], 'url': 'article-%s.html' % index}
-
-    #     if item['section'] not in dic:
-    #         dic[item['section']] = [aux]
-
-    #     else:
-    #         dic[item['section']].append(aux)
-
-    for section_name in sorted(dic.keys()):
-        items = sorted(dic[section_name], key=lambda x: x['title'])
-
-        ctx['menu_sections'].append({'name': section_name, 'items': items})
-
+    ctx = {'data': _DATA}
     return ctx
 
+def enhance_data():
+    # tasks = ctx['data']['phases'][0]['stages'][0]['categories'][0]['tasks'][]
 
-# def cleanup():
-#     template = open('%s/article.html' % _SEARCHPATH).read()
+    ctx = load_data()
 
-#     # Remove publication templates that are no longer needed.
-#     for filename in listdir(_SEARCHPATH):
-#         filepath = '%s/%s' % (_SEARCHPATH, filename)
+    phases = ctx['data']['phases']
 
-#         if filename.startswith('article-') and path.isfile(filepath):
-#             remove(filepath)
+    start_gantt = convert_to_time(START_GANTT)
+    end_gantt = convert_to_time(END_GANTT)
 
-#     # Clean the output folder.
-#     if path.exists(_OUTPUTPATH):
-#         rmtree(_OUTPUTPATH)
+    for phase in phases:
+        stages = phase['stages']
+        
+        for stage in stages:
+            categories = stage['categories']
+            
+            for category in categories:
+                tasks = category['tasks']
+                category['length'] = len(tasks)
 
-#     makedirs(_OUTPUTPATH)
+                for task in tasks:
+                    task['start_date_obj'] = convert_to_time(task['start_date'])
+                    task['end_date_obj'] = convert_to_time(task['end_date'])
+                    task['months_from_start'] = get_month_delta(start_gantt, task['start_date_obj'])
+                    task['left'] = task['months_from_start'] * COL_WIDTH
+                    task['timespan'] = (get_month_delta(task['start_date_obj'], task['end_date_obj']) +1) * COL_WIDTH
+                    
 
-#     for index, data in enumerate(_DATA):
-#         new_file = open('%s/article-%s.html' % (_SEARCHPATH, index), 'w+')
-#         new_page = template.replace('data[0]', 'data[%d]' % index)
-
-#         new_file.write(new_page)
-#         new_file.close()
-
+    return ctx
 
 if __name__ == '__main__':
     site = make_site(
         filters={},
         outpath=_OUTPUTPATH,
-        contexts=[(r'.*.html', load_data)],
+        contexts=[(r'.*.html', enhance_data)],
         searchpath=_SEARCHPATH,
         staticpaths=['static', '../data']
     )

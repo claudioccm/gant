@@ -13,11 +13,6 @@
     background-color: $gray-03;
 }
 
-.m-active {
-    max-height: 49px;
-    overflow: hidden;
-}
-
 .content {
     flex: 1;
     position: relative;
@@ -105,18 +100,6 @@
     }
 }
 
-.header .progress {
-    background-color: $gray-10;
-    height: 49px;
-    width: 100%;
-
-    .bar {
-        height: 100%;
-        left: 0;
-        top: 0;
-    }
-}
-
 .task .progress {
     height: 10px;
 
@@ -124,4 +107,8 @@
         background-color: green;
         height: 100%;
     }
+}
+
+.category:not(.m-active) .task .progress {
+    top: 20px;
 }

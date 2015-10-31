@@ -1,16 +1,767 @@
-- title: 'Title'
-  section: 'Section Name'
-  original_post_url: '#link'
-  submitted_by: 'Author Name'
-  coauthor: 'CoAuthor Name'
-  cover_img_file: 'china-train.jpg'
-  content: >
-    <p>Lorem ipsum dolor sit amet, <span class="tweetable">consectetur adipisicing elit.</span> Eos error nemo, rem veritatis. Voluptas, hic expedita repellat at sequi natus nemo magnam omnis soluta quae neque ut ea, itaque cupiditate.</p>
+responsibles:
+    - id: 1
+      name: Action by OPCS and follow-up by PIO/GGP
+      color: blue
 
-# - title: ''
-#   section: ''
-#   original_post_url: ''
-#   submitted_by: ''
-#   coauthor: ''
-#   cover_img_file: ''
-#   content: >
+    - id: 2
+      name: Action by PIO and follow-up by OPCS
+      color: orange
+
+    - id: 3
+      name: Joint action by both OPCS and PIO
+      color: green
+
+phases:
+    - name: "Part 1: Organizing for Delivery"
+      stages:
+        - name: Staff Skills
+          categories:
+            - name: Enhance and Train Staff
+              tasks:
+                - id: 001
+                  name: Integrated Operations Risk Management Forum
+                  start_date: 6-1-2015 
+                  end_date: 6-30-2015
+                  progress: 23
+                  relevance: 1
+                  responsible: 1
+
+                - id: 002
+                  name: Develop Training Material
+                  start_date: 6-1-2015
+                  end_date: 8-31-2015
+                  progress: 56
+                  relevance: 1
+                  responsible: 1
+
+                - id: 003
+                  name: Training of 60 Trainers (ToT)
+                  start_date: 9-1-2015
+                  end_date: 9-30-2015
+                  progress: 12
+                  relevance: 1
+                  responsible: 1
+
+                - id: 004
+                  name: Focused F2F Training to PIO Staff on New Framework
+                  start_date: 10-1-2015
+                  end_date: 11-30-2015
+                  progress: 87
+                  relevance: 1
+                  responsible: 1
+
+                - id: 005
+                  name: Focused F2F Training to TTLs on New Framework
+                  start_date: 11-1-2015
+                  end_date: 12-31-2015
+                  progress: 55
+                  relevance: 1
+                  responsible: 1
+
+                - id: 006
+                  name: Focused F2F Training to PIUs on New Framework
+                  start_date: 12-1-2015
+                  end_date: 1-31-2016
+                  progress: 63
+                  relevance: 1
+                  responsible: 1
+
+                - id: 007
+                  name: Training on Soft Skills (including change management)
+                  start_date: 3-1-2016
+                  end_date: 5-31-2016
+                  progress: 98
+                  relevance: 1
+                  responsible: 2
+
+            - name: Strategic Staffing
+              tasks:
+              - id: 008
+                name: Competencies and Roles
+                start_date: 6-1-2015 
+                end_date: 9-30-2015
+                progress: 46
+                relevance: 1
+                responsible: 2
+
+            - name: Skills Assessment
+              tasks:
+              - id: 009
+                name: Assessments
+                start_date: 8-1-2016 
+                end_date: 8-31-2016
+                progress: 46
+                relevance: 1
+                responsible: 2
+
+            - name: Acreditation
+              tasks:
+                - id: 010
+                  name: Accreditation of all procurement staff
+                  start_date: 12-1-2015
+                  end_date: 2-29-2016
+                  progress: 46
+                  relevance: 1
+                  responsible: 1
+
+                - id: 011
+                  name: Accreditation of TTLs
+                  start_date: 3-1-2016
+                  end_date: 5-31-2016
+                  progress: 46
+                  relevance: 1
+                  responsible: 1
+
+            - name: Management of Skill Sets
+              tasks:
+                - id: 012
+                  name: "Global Talent Pool (Innovations and E-GP, open contracting, professionalization, performance measurements and data analysis)"
+                  start_date: 12-1-2015 
+                  end_date: 12-31-2015 # 2015?
+                  progress: 46
+                  relevance: 1
+                  responsible: 2 
+
+                - id: 013
+                  name: "Subject matter experts (Transport, Power, FCS, Health, etc.)"
+                  start_date: 1-1-2016
+                  end_date: 1-31-2016
+                  progress: 46
+                  relevance: 1
+                  responsible: 2     
+
+                - id: 014
+                  name: General procurement staff
+                  start_date: 1-1-2016
+                  end_date: 1-31-2016
+                  progress: 46
+                  relevance: 1
+                  responsible: 2    
+
+            - name: Help Desk
+              tasks:
+                - id: 015
+                  name: Establish Help Desk (appoint and train staff)
+                  start_date: 1-1-2016 
+                  end_date: 6-30-2016
+                  progress: 46
+                  relevance: 1
+                  responsible: 1       
+        # - name: Borrowers
+        #   categories:
+        #     - name: Borrowers
+        #       tasks:
+        #         - id: 016
+        #           name: Capacity Building
+        #           start_date: 8-1-2015 
+        #           end_date: 8-31-2016
+        #           progress: 46
+        #           relevance: 1
+        #           responsible: 3
+        # - name: Tools and Guidance Notes
+        #   categories:
+        #     - name: Borrowers
+        #       tasks:
+        #           - id: 017
+        #             name: Procurement planning and tracking system (STEP)
+        #             start_date: 6-1-2015 
+        #             end_date: 12-31-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1   
+
+        #           - id: 018
+        #             name: "Guidance note on Project Procurement Strategy for Development (incl. market analysis, etc.)"
+        #             start_date: 7-1-2015 
+        #             end_date: 8-31-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1 
+
+        #           - id: 019
+        #             name: Develop performance matrices to measure proc. efficiency  (e.g. KPIs)
+        #             start_date: 7-1-2015
+        #             end_date: 10-31-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1 
+
+        #           - id: 020
+        #             name: Guidance Note on extended complaints handling
+        #             start_date: 7-1-2015 
+        #             end_date: 8-31-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1 
+
+        #           - id: 021
+        #             name: APA Guidance note and assessment tool
+        #             start_date: 8-1-2015
+        #             end_date: 9-30-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1 
+
+        #           - id: 022
+        #             name: Guidance not on integrity and anti-corruption
+        #             start_date: 10-1-2015
+        #             end_date: 11-30-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1
+
+        #           - id: 023
+        #             name: Guidance note on selection methods
+        #             start_date: 10-1-2015
+        #             end_date: 11-30-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1
+
+        #           - id: 024
+        #             name: "Guidance note on competitive dialogue, negotiations, PPPs"
+        #             start_date: 10-1-2015
+        #             end_date: 11-30-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1
+
+        #           - id: 025
+        #             name: Guidance note on evaluation criteria and VfM
+        #             start_date: 10-1-2015
+        #             end_date: 11-30-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1
+
+        #           - id: 026
+        #             name: "Guidance note for working in FCS, small states and emergency situations"
+        #             start_date: 10-1-2015
+        #             end_date: 11-30-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1
+
+        #           - id: 027
+        #             name: Guidance note for hands-on support
+        #             start_date: 10-1-2015
+        #             end_date: 11-30-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1
+
+        #           - id: 028
+        #             name: Guidance note Systemic Country Diagnosis
+        #             start_date: 10-1-2015
+        #             end_date: 11-30-2015
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 2
+
+        #           - id: 029
+        #             name: E-learning for tools for application of the Framework
+        #             start_date: 10-1-2016 
+        #             end_date: 11-30-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1
+
+        #           - id: 030
+        #             name: Sustainable procurement toolkit
+        #             start_date: 11-1-2015
+        #             end_date: 3-31-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1 #,2
+
+        #           - id: 031
+        #             name: Guidance note on contract management
+        #             start_date: 11-1-2015
+        #             end_date: 3-31-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 3
+
+        #           - id: 032
+        #             name: Complaints tracking and monitoring tool upgrade
+        #             start_date: 11-1-2015
+        #             end_date: 3-31-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 3
+
+        #           - id: 033
+        #             name: Develop Integrated Fiduciary Risk Assessment tool
+        #             start_date: 1-1-2016
+        #             end_date: 2-29-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 3
+
+        #           - id: 034
+        #             name: Enhance systems/applications to facilitate open data
+        #             start_date: 7-1-2015 
+        #             end_date: 1-31-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 3
+
+        # - name: Standard and Model Documents
+        #   categories:
+        #     - name: Borrowers
+        #       tasks:
+        #           - id: 035
+        #             name: Update of Bank's existing standard selection documents
+        #             start_date: 9-1-2015 
+        #             end_date: 2-29-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1   
+
+        #           - id: 036
+        #             name: Interactive Standard/Model Document
+        #             start_date: 12-1-2015
+        #             end_date: 1-31-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1 
+
+        #           - id: 037
+        #             name: "New standard selection/model documents (e.g. RFP, competitive dialogue)"
+        #             start_date: 3-1-2016 
+        #             end_date: 5-31-2016
+        #             progress: 46
+        #             relevance: 1
+        #             responsible: 1 
+
+        # - name: Standardization of processes      
+        #   categories:
+        #     - name: Borrowers
+        #       tasks:
+        #         - id: 038
+        #           name: Standardization of progress
+        #           start_date: 6-1-2015 
+        #           end_date: 12-31-2015
+        #           progress: 46
+        #           relevance: 1
+        #           responsible: 2
+
+        # - name: Internal Sector Engagement
+        #   categories:
+        #     - name: The PIO Team
+        #       tasks:
+        #         - id: 039
+        #           name: New business opportunities/Transformational engagements
+        #           start_date: 12-1-2015
+        #           end_date: 2-29-2016
+        #           progress: 46
+        #           relevance: 1
+        #           responsible: 2
+
+        #     - name: The GPs
+        #       tasks:
+        #         - id: 040
+        #           name: New business opportunities/Transformational engagements
+        #           start_date: 1-1-2016
+        #           end_date: 3-31-2016
+        #           progress: 46
+        #           relevance: 1
+        #           responsible: 2
+
+        #     - name: The CMUs
+        #       tasks:
+        #         - id: 041
+        #           name: New business opportunities/Transformational engagements
+        #           start_date: 2-1-2016
+        #           end_date: 5-31-2016
+        #           progress: 46
+        #           relevance: 1
+        #           responsible: 2
+
+    # - stage:
+    #     name: 
+    #     - category:
+    #        name: PIUs
+    #         - task:
+    #             id: 042
+    #             name: Dissemination/overview of new framework
+    #             start_date: 11-1-2015 
+    #             end_date: 2-29-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 043
+    #             name: Rolling out new e-learning        
+    #             start_date: 2-1-2016 
+    #             end_date: 4-30-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #     - category:
+    #        name: "MDBs, Bilateral Donors, and UN Agencies"
+    #         - task:
+    #             id: 044
+    #             name: "Harmonization of procurement policies, standard documents and sanctions"
+    #             start_date: 7-1-2016 
+    #             end_date: 9-30-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 1
+
+    #         - task:
+    #             id: 045
+    #             name: Review and optimize agreements with UN agencies
+    #             start_date: 7-1-2016 
+    #             end_date: 9-30-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 1
+
+    #     - category:
+    #        name: Business Community
+    #         - task:
+    #             id: 046
+    #             name: Work with FIDIC on the appropriate allocation of risk in the FIDIC
+    #             start_date: 8-1-2016
+    #             end_date: 8-31-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 1
+
+    #         - task:
+    #             id: 047
+    #             name: External sectoral engagement
+    #             start_date: 8-1-2016
+    #             end_date: 8-31-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 1
+
+    # - stage:
+    #     name: Framework Application - First Set of Actions
+    #     #- category:
+    #     #   name: Borrowers
+    #         - task:
+    #             id: 048
+    #             name: Establish Multi Donor Trust Fund to further support strategic capacity building
+    #             start_date: 9-1-2015 
+    #             end_date: 8-31-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 049
+    #             name: Identify borrower countries for accelerated capacity building
+    #             start_date: 9-1-2015 
+    #             end_date: 8-31-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 050
+    #             name: Prepare a proposal to streamline prior review for SPN to transit gradually to new framework
+    #             start_date: 12-1-2015
+    #             end_date: 2-29-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #          - task:
+    #             id: 051
+    #             name: Amendments to FA to retrofit to the new framework
+    #             start_date: 12-1-2015
+    #             end_date: 2-29-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 052
+    #             name: Establish oversight/review for APA
+    #             start_date: 8-1-2015 
+    #             end_date: 8-31-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 053
+    #             name: Identify 100 agencies candidates for APA
+    #             start_date: 1-1-2016 
+    #             end_date: 3-31-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 054
+    #             name: Identify the set of FCS Projects for expanded hands on support
+    #             start_date: 1-1-2016 
+    #             end_date: 2-29-2017
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 055
+    #             name: Identify SPN Projects with Complex contracts for contract management support
+    #             start_date: 1-1-2016 
+    #             end_date: 2-29-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 056
+    #             name: Full assessment of 10 agencies for APA
+    #             start_date: 3-1-2016 
+    #             end_date: 5-31-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 2
+
+    #         - task:
+    #             id: 057
+    #             name: Identify potential projects for delegation of leadership to other MDBs where the WB is a minority financier
+    #             start_date: 10-1-2016 
+    #             end_date: 12-31-2016
+    #             progress: 46
+    #             relevance: 1
+    #             responsible: 3
+# - phase:
+#     name: Part II: Key Activities Under the framework
+#     #- stage:
+#         #name: 
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 058
+#                 name: Procurement Change Team
+#                 start_date: 8-1-2015 
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 3
+
+#             - task:
+#                 id: 059
+#                 name: Professional Panel
+#                 start_date: 8-1-2015 
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 3
+
+#     - stage:
+#         name: Complaints Monitoring        
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 060
+#                 name: Complaints Monitoring
+#                 start_date: 8-1-2015 
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 3
+
+#             - task:
+#                 id: 061
+#                 name: Identifying and establish framework agreements with DRB/Dispute review experts
+#                 start_date: 8-1-2015 
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 1
+
+#     - stage:
+#         name: Transition
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 062
+#                 name: Identify projects to transition to the new framework
+#                 start_date: 8-1-2015 
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+#     - stage:
+#         name: Sustainable Procurement
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 063
+#                 name: Sustainable procurement in projects
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+#     - stage:
+#         name: Rebalancing Prior and Post Reviews
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 064
+#                 name: Rebalancing Prior and Post Reviews
+#                 start_date: 11-1-2015 
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+#             - task:
+#                 id: 065
+#                 name: Identify external auditors/SAIs/CSOs (and establish framework agreements)
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+#     - stage:
+#         name: Procurement Strategy for Development (PPSD) and Project Plan
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 066
+#                 name: Development of Procurement Strategy for Development (PPSD) and Project Plans
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 3
+
+#     - stage:
+#         name: Contract Management
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 067
+#                 name: Contract Management Support
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+#     - stage:
+#         name: Strengthening Systems
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 068
+#                 name: Capacity Building and Strengthening Systems
+#                 start_date: 7-1-2015
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+#     - stage:
+#         name: Expanded Hands-On
+#         #- category:
+#             #name:
+#             - task:
+#                 id: 069
+#                 name: Expanded Hands-On
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+# - phase:
+#     name: Part III: Post-Implementation Activities
+#     - stage:
+#         name: Monitoring and Evaluation
+#         #- category:
+#          #   name:
+#             - task:
+#                 id: 070
+#                 name: Monitoring and Evaluation     
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 3
+
+#     - stage:
+#         name: Reporting to CODE
+#         #- category:
+#          #   name:
+#             - task:
+#                 id: 071
+#                 name: "Reporting to CODE/AC (implementation, APAs, waivers, etc.)"
+#                 start_date: 7-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 3
+
+#     - stage:
+#         name: Project Transition
+#         #- category:
+#          #   name:
+#             - task:
+#                 id: 072
+#                 name: Project Transition
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 3
+
+# - phase:
+#     name: Part IV: Risk Management
+#     #- stage:
+#         #name:
+#         #- category:
+#         #   name:
+#             - task:
+#                 id: 073
+#                 name: Risk Management
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+#             - task:
+#                 id: 074
+#                 name: Report on prior review
+#                 start_date: 1-1-2016
+#                 end_date: 8-31-2016
+#                 progress: 46
+#                 relevance: 1
+#                 responsible: 2
+
+
+
+
+# phases:
+# - name: "Part 1: Organizing for Delivery"
+#   stages:
+#     - name: Staff Skills claudio
+#       categories:
+#         - name: Enhance and Train Staff
+#           tasks:
+#             - id: 001
+#               name: Integrated Operations Risk Management Forum
+#               start_date: 6-1-2015 
+#               end_date: 6-30-2015
+#               progress: 46
+#               relevance: 1
+#               responsible: 1
+
+
+
+
