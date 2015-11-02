@@ -18,6 +18,10 @@ body {
   display: block;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
 
+.row.header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+  margin-top: -1px; }
+
 .row:nth-of-type(even) {
   background-color: rgba(0, 0, 0, 0.03); }
 
@@ -90,13 +94,109 @@ body {
     opacity: .3; }
 
 .task .progress {
-  height: 10px; }
+  height: 10px;
+  margin: 19px 0; }
   .task .progress .bar {
     background-color: green;
     height: 100%; }
 
-.category:not(.m-active) .task .progress {
-  top: 20px; }
+.stage-thumbs,
+.category-thumbs {
+  position: relative; }
+
+.tasks-thumb {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  opacity: 0; }
+
+.task-thumb {
+  position: relative;
+  flex: 1;
+  max-height: 10px;
+  background-color: rgba(0, 0, 0, 0.05); }
+
+.category-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%; }
+  .category-progress .bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%; }
+    .category-progress .bar > span {
+      position: absolute;
+      left: 0;
+      margin: 12px;
+      font-size: 16px;
+      display: inline-block; }
+      .category-progress .bar > span > span {
+        font-size: 0.7em; }
+
+.stage-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%; }
+  .stage-progress .bar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 100%; }
+    .stage-progress .bar > span {
+      position: absolute;
+      left: 0;
+      margin: 12px;
+      font-size: 16px;
+      display: inline-block;
+      font-weight: normal; }
+      .stage-progress .bar > span > span {
+        font-size: 0.7em; }
+
+.control {
+  font-size: 20px;
+  display: inline-block;
+  margin: 11px 15px 0;
+  cursor: pointer; }
+  .control .expand {
+    display: none; }
+
+.stage.m-active .category {
+  display: none; }
+.stage.m-active .tasks-thumb {
+  opacity: 1; }
+.stage.m-active .control .collapse {
+  display: none; }
+.stage.m-active .control .expand {
+  display: block; }
+
+.category.m-active .task {
+  display: none; }
+.category.m-active .tasks-thumb {
+  opacity: 1; }
+.category.m-active .control .collapse {
+  display: none; }
+.category.m-active .control .expand {
+  display: block; }
+
+.responsible-1 .bar {
+  background-color: red !important; }
+
+.responsible-2 .bar {
+  background-color: blue !important; }
+
+.responsible-3 .bar {
+  background-color: orange !important; }
 
 body, html {
   height: 100%; }

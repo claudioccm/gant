@@ -1,6 +1,10 @@
 $(document).ready(function($) {
-    $('.js-collapse').click(function() {
-        $(this).parent().toggleClass('m-active');
+    $('.js-stage-collapse').click(function() {
+        $(this).closest('.stage').toggleClass('m-active');
+    });
+
+    $('.js-category-collapse').click(function() {
+        $(this).closest('.category').toggleClass('m-active');
     });
 
 
