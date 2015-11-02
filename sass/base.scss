@@ -9,6 +9,11 @@
     border-bottom: 1px solid $gray-10;
 }
 
+.row.header {
+    border-bottom: 1px solid $gray-25;
+    margin-top: -1px;
+}
+
 .row:nth-of-type(even) {
     background-color: $gray-03;
 }
@@ -102,6 +107,7 @@
 
 .task .progress {
     height: 10px;
+    margin: 19px 0;
 
     .bar {
         background-color: green;
@@ -109,6 +115,105 @@
     }
 }
 
-.category:not(.m-active) .task .progress {
-    top: 20px;
+.stage-thumbs,
+.category-thumbs { position: relative; }
+
+.tasks-thumb {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    opacity: 0;
 }
+
+.task-thumb {
+    position: relative;
+    flex: 1;
+    max-height: 10px;
+    background-color: $gray-05;
+}
+
+.category-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    
+    .bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $gray-10;
+        height: 100%;
+
+        > span {
+            position: absolute;
+            left: 0;
+            margin: 12px;
+            font-size: 16px;
+            display: inline-block;
+
+            > span { font-size: 0.7em; }
+        }
+    }
+}
+
+.stage-progress {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    
+    .bar {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: $gray-10;
+        height: 100%;
+
+        > span {
+            position: absolute;
+            left: 0;
+            margin: 12px;
+            font-size: 16px;
+            display: inline-block;
+            font-weight: normal;
+
+            > span { font-size: 0.7em; }
+        }
+    }
+
+}
+
+.control {
+    font-size: 20px;
+    display: inline-block;
+    margin: 11px 15px 0;
+    cursor: pointer;
+
+    .expand { display: none; }
+}
+
+.stage.m-active {
+    .category { display: none; }
+    .tasks-thumb { opacity: 1; }
+    .control .collapse { display: none; }
+    .control .expand { display: block; }
+}
+
+.category.m-active {
+    .task { display: none; }
+    .tasks-thumb { opacity: 1; }
+    .control .collapse { display: none; }
+    .control .expand { display: block; }
+}
+
+.responsible-1 .bar { background-color: red !important; }
+.responsible-2 .bar { background-color: blue !important; }
+.responsible-3 .bar { background-color: orange !important; }
+

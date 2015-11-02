@@ -22,7 +22,7 @@ phases:
                   name: Integrated Operations Risk Management Forum
                   start_date: 6-1-2015 
                   end_date: 6-30-2015
-                  progress: 23
+                  progress: 80
                   relevance: 1
                   responsible: 1
 
@@ -30,7 +30,7 @@ phases:
                   name: Develop Training Material
                   start_date: 6-1-2015
                   end_date: 8-31-2015
-                  progress: 56
+                  progress: 60
                   relevance: 1
                   responsible: 1
 
@@ -38,7 +38,7 @@ phases:
                   name: Training of 60 Trainers (ToT)
                   start_date: 9-1-2015
                   end_date: 9-30-2015
-                  progress: 12
+                  progress: 100
                   relevance: 1
                   responsible: 1
 
@@ -46,7 +46,7 @@ phases:
                   name: Focused F2F Training to PIO Staff on New Framework
                   start_date: 10-1-2015
                   end_date: 11-30-2015
-                  progress: 87
+                  progress: 100
                   relevance: 1
                   responsible: 1
 
@@ -54,7 +54,7 @@ phases:
                   name: Focused F2F Training to TTLs on New Framework
                   start_date: 11-1-2015
                   end_date: 12-31-2015
-                  progress: 55
+                  progress: 5
                   relevance: 1
                   responsible: 1
 
@@ -62,7 +62,7 @@ phases:
                   name: Focused F2F Training to PIUs on New Framework
                   start_date: 12-1-2015
                   end_date: 1-31-2016
-                  progress: 63
+                  progress: 0
                   relevance: 1
                   responsible: 1
 
@@ -70,7 +70,7 @@ phases:
                   name: Training on Soft Skills (including change management)
                   start_date: 3-1-2016
                   end_date: 5-31-2016
-                  progress: 98
+                  progress: 0
                   relevance: 1
                   responsible: 2
 
@@ -90,7 +90,7 @@ phases:
                 name: Assessments
                 start_date: 8-1-2016 
                 end_date: 8-31-2016
-                progress: 46
+                progress: 21
                 relevance: 1
                 responsible: 2
 
@@ -100,7 +100,7 @@ phases:
                   name: Accreditation of all procurement staff
                   start_date: 12-1-2015
                   end_date: 2-29-2016
-                  progress: 46
+                  progress: 11
                   relevance: 1
                   responsible: 1
 
@@ -108,7 +108,7 @@ phases:
                   name: Accreditation of TTLs
                   start_date: 3-1-2016
                   end_date: 5-31-2016
-                  progress: 46
+                  progress: 15
                   relevance: 1
                   responsible: 1
 
@@ -118,7 +118,7 @@ phases:
                   name: "Global Talent Pool (Innovations and E-GP, open contracting, professionalization, performance measurements and data analysis)"
                   start_date: 12-1-2015 
                   end_date: 12-31-2015 # 2015?
-                  progress: 46
+                  progress: 100
                   relevance: 1
                   responsible: 2 
 
@@ -126,7 +126,7 @@ phases:
                   name: "Subject matter experts (Transport, Power, FCS, Health, etc.)"
                   start_date: 1-1-2016
                   end_date: 1-31-2016
-                  progress: 46
+                  progress: 0
                   relevance: 1
                   responsible: 2     
 
@@ -134,7 +134,7 @@ phases:
                   name: General procurement staff
                   start_date: 1-1-2016
                   end_date: 1-31-2016
-                  progress: 46
+                  progress: 3
                   relevance: 1
                   responsible: 2    
 

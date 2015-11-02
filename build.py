@@ -67,10 +67,13 @@ def enhance_data():
         
         for stage in stages:
             categories = stage['categories']
+            stage['progress'] = 0
             
             for category in categories:
                 tasks = category['tasks']
                 category['length'] = len(tasks)
+                category['progress'] = 0
+                
 
                 for task in tasks:
                     task['start_date_obj'] = convert_to_time(task['start_date'])
@@ -78,7 +81,12 @@ def enhance_data():
                     task['months_from_start'] = get_month_delta(start_gantt, task['start_date_obj'])
                     task['left'] = task['months_from_start'] * COL_WIDTH
                     task['timespan'] = (get_month_delta(task['start_date_obj'], task['end_date_obj']) +1) * COL_WIDTH
-                    
+                    category['progress'] += task['progress']
+            
+                category['progress'] = category['progress'] / len(tasks)
+                stage['progress'] += category['progress']
+
+            stage['progress'] = stage['progress'] / len(categories)
 
     return ctx
 

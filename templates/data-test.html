@@ -17,11 +17,13 @@
         {% for phase in data.phases %}
             {% for stage in phase.stages %}
                 {% for category in stage.categories %}
+                        <h2>{{category.progress}}</h2>
                         {% for task in category.tasks %}
                         Name: {{task.name}}<br>
                         Start: {{task.start_date_obj}}<br>
                         Months from Start: {{task.months_from_start}}<br>
                         Timespan: {{task.timespan}}<br>
+                        Task Progress: {{task.progress}}<br>
                         <br>
                     {% endfor %}
                 {% endfor %}
