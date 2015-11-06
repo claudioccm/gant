@@ -87,7 +87,11 @@
                                     <div class="bar" style="width: {{task.progress}}%;"></div>
                                 </div>
                             </div>
+                            {% if task.url %}<a class="link" href="./sample.html" target="_blank"><i class="material-icons">link</i></a>{% endif %}
                         </div>
+                        
+                            
+                        
                     {% endfor %}
                 </div>
             

@@ -25,6 +25,7 @@ phases:
                   progress: 80
                   relevance: 1
                   responsible: 1
+                  url: sample
 
                 - id: 002
                   name: Develop Training Material

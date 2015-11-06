@@ -199,6 +199,18 @@
     .expand { display: none; }
 }
 
+.link {
+    font-size: 20px;
+    display: inline-block;
+    margin: 11px 15px 0;
+    cursor: pointer;
+    color: $gray-30;
+
+    &:hover {
+        color: $main-color;
+    }
+}
+
 .stage.m-active {
     .category { display: none; }
     .tasks-thumb { opacity: 1; }
@@ -217,3 +229,38 @@
 .responsible-2 .bar { background-color: blue !important; }
 .responsible-3 .bar { background-color: orange !important; }
 
+
+.single {
+    header {
+        height: 50px;
+        background-color: $main-color;
+
+        .back {
+            font-size: 15px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin-left: 30px;
+            padding: 12px 20px 12px 10px;
+
+            &:hover {
+                background-color: $gray-10;
+            }
+
+
+            i {
+                vertical-align: -7px;
+            }
+        }
+    }
+
+    .wrapper {
+        width: 960px;
+        margin: 0 auto;
+
+        img {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+}
